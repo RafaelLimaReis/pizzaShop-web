@@ -4,6 +4,14 @@
   ],
   "plugins": ["simple-import-sort"],
   "rules": {
-    "simple-import-sort/imports": "error"
+    "simple-import-sort/imports": "error",
+    "prettier/prettier": ["error", {
+      "printWidth": 100,
+      "tabWidth": 4,
+      "singleQuote": true,
+      "arrowParens": "always",
+      "semi": false,
+      "endOfLine": "auto"
+    }]
   }
 }
