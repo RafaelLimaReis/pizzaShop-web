@@ -12,16 +12,16 @@ const signInForm = z.object({
     email: z.string().email(),
 })
 
-type TypeSignInForm = z.infer<typeof signInForm>
+type SignInFormType = z.infer<typeof signInForm>
 
 export function SignIn() {
     const {
         register,
         handleSubmit,
         formState: { isSubmitting },
-    } = useForm<TypeSignInForm>()
+    } = useForm<SignInFormType>()
 
-    async function handleSignIn(data: TypeSignInForm) {
+    async function handleSignIn(data: SignInFormType) {
         console.log(data)
 
         await new Promise((resolve) => setTimeout(resolve, 2000))
